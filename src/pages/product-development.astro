@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center bg-black p-10 ">
+    <!-- purple gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#7E5AFF]/20 to-transparent pointer-events-none"></div>
+    <div class="relative container mx-auto px-4 py-32 " >
+      <span class="inline-block px-4 py-2 rounded-full text-sm font-medium bg-blue-600 text-white mb-6">
+        PRODUCT DEVELOPMENT
+      </span>
+      <h1 class="text-7xl font-bold text-white mb-8 leading-tight max-w-3xl">
+        Design, build, and ship<br />
+        your new product
+      </h1>
+      <p class="text-xl text-gray-400 max-w-2xl mb-12">
+        Boltsec offers contract engineering services to founders and business leaders. Our process
+        was refined over decades of experiences founding dozens of startups, where we were
+        battle‑tested and learned how to find product‑market fit.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors"
+      >
+        Get In Touch
+      </a>
+    </div>
+
+   
+  </section>
+
+  <!-- OUR SERVICES (light card) -->
+  <section class="py-32 bg-[#0D0D0D]">
+    <div class="container mx-auto px-4">
+      <div class="relative max-w-6xl mx-auto rounded-2xl overflow-hidden">
+        <!-- topo pattern -->
+        <div
+          class="absolute inset-0 bg-[url('/assets/topo-pattern.svg')] bg-cover bg-center opacity-10"
+        ></div>
+        <div class="relative bg-gray-50 p-16 rounded-2xl">
+          <p class="text-sm uppercase tracking-wider text-gray-500 mb-4">OUR SERVICES</p>
+          <h2 class="text-5xl font-bold text-gray-900 mb-8">We’ll launch your new product.</h2>
+          <p class="text-lg text-gray-600 mb-4">
+            Boltsec offers contract engineering services to founders and business leaders. Our
+            process was refined over decades of experiences founding dozens of startups, where we
+            were battle‑tested and learned how to find product‑market fit.
+          </p>
+          <p class="text-lg text-gray-600">
+            Our past experience building with many contract engineering firms taught us what
+            worked and what didn’t in the outsourcing model. We created the studio we wished we
+            could hire for our past startups.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-32 bg-[#0D0D0D]">
+    <div class="container mx-auto px-4">
+      <div class="relative max-w-6xl mx-auto rounded-2xl overflow-hidden">
+        <!-- topo pattern -->
+        <div
+          class="absolute inset-0 bg-[url('/assets/topo-pattern.svg')] bg-cover bg-center opacity-10"
+        ></div>
+        <!-- light card -->
+        <div class="relative bg-gray-50 p-16 rounded-2xl">
+          <!-- Section Label -->
+          <p class="text-sm uppercase tracking-wider text-gray-500 mb-4 text-center">
+            LET’S GET STARTED
+          </p>
+          <!-- Heading -->
+          <h2 class="text-5xl font-bold text-gray-900 mb-16 text-center">
+            Our process
+          </h2>
+          <!-- Steps Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+            <!-- Step 1 -->
+            <div>
+              <p class="text-sm uppercase tracking-wider text-gray-500 mb-4">
+                01
+              </p>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                Understand
+              </h3>
+              <p class="text-gray-600">
+                We work closely with you to understand your goals and create a plan to achieve them together.
+              </p>
+            </div>
+            <!-- Step 2 -->
+            <div>
+              <p class="text-sm uppercase tracking-wider text-gray-500 mb-4">
+                02
+              </p>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                Design
+              </h3>
+              <p class="text-gray-600">
+                We go deep on your users’ needs, design the UI/UX of the product, and create a roadmap for development.
+              </p>
+            </div>
+            <!-- Step 3 -->
+            <div>
+              <p class="text-sm uppercase tracking-wider text-gray-500 mb-4">
+                03
+              </p>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                Build
+              </h3>
+              <p class="text-gray-600">
+                Our experienced engineering team will bring your product to life using a modern, maintainable tech stack.
+              </p>
+            </div>
+            <!-- Step 4 -->
+            <div>
+              <p class="text-sm uppercase tracking-wider text-gray-500 mb-4">
+                04
+              </p>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                Ship
+              </h3>
+              <p class="text-gray-600">
+                We deploy your product and iterate based on feedback from your team or customers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY Boltsec -->
+  <section class="py-32 relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-xl"></div>
+    <div class="container mx-auto px-4 relative">
+      <p class="text-sm uppercase tracking-wider text-[#7E5AFF] mb-4">WHY Boltsec</p>
+      <h2 class="text-5xl font-bold text-white mb-16">
+        Decades building in early-stage and<br />
+        growth environments
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-black/40 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
+          <div class="text-[#7E5AFF] mb-6"><!-- icon placeholder --></div>
+          <h3 class="text-xl font-bold text-white mb-4">
+            Our team has a highly useful mix of experience.
+          </h3>
+          <p class="text-gray-400">
+            We are a team of product innovation leaders from Silicon Valley and professionals from
+            large organizations across the modern economy.
+          </p>
+        </div>
+        <div class="bg-black/40 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
+          <div class="text-[#7E5AFF] mb-6"><!-- icon placeholder --></div>
+          <h3 class="text-xl font-bold text-white mb-4">
+            A track record of scaling startups.
+          </h3>
+          <p class="text-gray-400">
+            Our battle‑tested product & engineering culture has grounded us for 10+ years of
+            building.
+          </p>
+        </div>
+        <div class="bg-black/40 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
+          <div class="text-[#7E5AFF] mb-6"><!-- icon placeholder --></div>
+          <h3 class="text-xl font-bold text-white mb-4">
+            Talent, vetted and globally sourced.
+          </h3>
+          <p class="text-gray-400">
+            We’ve traveled far and wide to find & hire the best engineers to bring your vision to
+            life.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
