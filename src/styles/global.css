@@ -13,8 +13,8 @@
 .sevices-card-2 {
   @apply flex flex-col justify-around items-center text-white border border-[#282828] rounded-lg no-underline;
   background-image:
-    url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66792b96c96ca3dc1c3a9af0_gradient22.webp'),
-    url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66792b96c96ca3dc1c3a9af0_Service-Cards1.webp');
+    url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/662f755cd563e64f82279e09_gradient22.webp'),
+    url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/662f750a1fe2fceb23947f0e_Service-Cards1.webp');
   background-position: 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -31,8 +31,7 @@
 .sevices-card-1 {
   @apply flex flex-col justify-start items-center text-white border border-[#282828] rounded-lg no-underline;
   background-image:
-    url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66792b96a7441d7cef6a6550_Ellipse%20439.webp'),
-    url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66792b96a7441d7cef6a6550_Contours1.webp');
+    url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/662f74208a1214a0cb7f81ad_Contours1.webp');
   background-position: 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -59,5 +58,19 @@
 .page-badge-purple {
   background-color: #6749ff;
 }
-
+.services-vector {
+  background-image: none;
+  background-repeat: repeat;
+  background-size: auto;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-self: stretch;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.image-3 {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
 }
