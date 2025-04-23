@@ -50,59 +50,162 @@ const Slide: React.FC<{
   onClick: (i: number) => void;
 }> = React.memo(({ slide, index, current, onClick }) => {
   const isCurrent = current === index;
+  const slideRef = useRef<HTMLLIElement>(null);
+  const xRef = useRef(0);
+  const yRef = useRef(0);
+  const frameRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const animate = () => {
+      if (slideRef.current) {
+        slideRef.current.style.setProperty("--x", `${xRef.current}px`);
+        slideRef.current.style.setProperty("--y", `${yRef.current}px`);
+      }
+      frameRef.current = requestAnimationFrame(animate);
+    };
+    
+    frameRef.current = requestAnimationFrame(animate);
+    return () => {
+      if (frameRef.current) cancelAnimationFrame(frameRef.current);
+    };
+  }, []);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!slideRef.current) return;
+    const rect = slideRef.current.getBoundingClientRect();
+    xRef.current = e.clientX - (rect.left + rect.width / 2);
+    yRef.current = e.clientY - (rect.top + rect.height / 2);
+  };
+
+  const handleMouseLeave = () => {
+    xRef.current = 0;
+    yRef.current = 0;
+  };
 
   return (
-    <li
-      className="flex flex-1 flex-col items-center justify-center relative text-center text-white w-[70vmin] h-[70vmin] mx-[4vmin] z-10 transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
-      onClick={() => onClick(index)}
-      style={{
-        transform: isCurrent
-          ? "scale(1) rotateX(0deg)"
-          : "scale(0.98) rotateX(8deg)",
-        transformOrigin: "bottom",
-      }}
-    >
-      <div className="absolute inset-0 bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-opacity duration-300">
-        <img
-          className="absolute inset-0 w-[120%] h-[120%] object-cover transition-opacity duration-300"
-          src={slide.src}
-          alt={slide.title}
-          style={{ opacity: isCurrent ? 1 : 0.5 }}
-        />
-        {isCurrent && <div className="absolute inset-0 bg-black/30" />}
-      </div>
-
-      <article
-        className={`relative p-[4vmin] transition-opacity duration-500 ${
-          isCurrent ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+    <div className="[perspective:1200px] [transform-style:preserve-3d]">
+      <li
+        ref={slideRef}
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white w-[70vmin] h-[70vmin] mx-[4vmin] z-10 transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+        onClick={() => onClick(index)}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          transform: isCurrent
+            ? "scale(1) rotateX(0deg)"
+            : "scale(0.98) rotateX(8deg)",
+          transformOrigin: "bottom",
+        }}
       >
-        <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold mb-4">
-          {slide.title}
-        </h2>
-        <button className="px-4 py-2 bg-white text-black rounded-2xl shadow-sm hover:shadow-lg transition">
-          {slide.button}
-        </button>
-      </article>
-    </li>
+        <div
+          className="absolute inset-0 bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
+          style={{
+            transform: isCurrent
+              ? "translate3d(calc(var(--x)/30), calc(var(--y)/30), 0)"
+              : "none",
+          }}
+        >
+          <img
+            className="absolute inset-0 w-[120%] h-[120%] object-cover transition-opacity duration-300"
+            src={slide.src}
+            alt={slide.title}
+            style={{ opacity: isCurrent ? 1 : 0.5 }}
+          />
+          {isCurrent && <div className="absolute inset-0 bg-black/30" />}
+        </div>
+
+        <article
+          className={`relative p-[4vmin] transition-opacity duration-500 ${
+            isCurrent ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+        >
+          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold mb-4">
+            {slide.title}
+          </h2>
+          <button className="px-4 py-2 bg-white text-black rounded-2xl shadow-sm hover:shadow-lg transition">
+            {slide.button}
+          </button>
+        </article>
+      </li>
+    </div>
   );
 });
 
 export function ClientCarousel() {
   const [current, setCurrent] = useState<number>(0);
+  const [startX, setStartX] = useState<number>(0);
+  const [isDragging, setIsDragging] = useState(false);
   const id = useId();
   const len = slideData.length;
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setStartX(e.touches[0].clientX);
+    setIsDragging(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging) return;
+    e.preventDefault();
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!isDragging) return;
+    const endX = e.changedTouches[0].clientX;
+    handleSwipe(endX - startX);
+    setIsDragging(false);
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setStartX(e.clientX);
+    setIsDragging(true);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    e.preventDefault();
+  };
+
+  const handleMouseUp = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    const endX = e.clientX;
+    handleSwipe(endX - startX);
+    setIsDragging(false);
+  };
+
+  const handleSwipe = (deltaX: number) => {
+    const containerWidth = containerRef.current?.offsetWidth || 0;
+    const swipeThreshold = containerWidth * 0.1; // 10% of container width
+
+    if (Math.abs(deltaX) > swipeThreshold) {
+      if (deltaX > 0) {
+        // Swipe right - previous
+        setCurrent((c) => (c - 1 + len) % len);
+      } else {
+        // Swipe left - next
+        setCurrent((c) => (c + 1) % len);
+      }
+    }
+  };
 
   return (
     <div
+      ref={containerRef}
       className="relative w-[70vmin] h-[70vmin] mx-auto"
       aria-labelledby={`carousel-${id}`}
     >
       <ul
-        className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
+        className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out cursor-grab active:cursor-grabbing"
         style={{
           transform: `translateX(-${(current * 100) / len}%)`,
         }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={() => setIsDragging(false)}
       >
         {slideData.map((slide, i) => (
           <Slide
