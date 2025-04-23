@@ -31,7 +31,7 @@ const MobileMenu = ({ isOpen }: MobileMenuProps) => {
           Home
         </a>
         <a
-          href="/ai-solutions"
+          href="/cases"
           className="text-gray-400 hover:text-gray-300 transition-colors text-xl"
           aria-label="AI Solutions"
         >
