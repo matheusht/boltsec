@@ -10,6 +10,7 @@ import Layout from '../layouts/Layout.astro';
       w-full
       h-[90vh]
       bg-[url('/bg2.png')]
+      blur-[0px]
       bg-center
       bg-cover
       rounded-[10px]
@@ -43,8 +44,6 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <div class="my-16 border-gray-800" />
-
   <!-- WHO WE ARE -->
   <section class="py-32 px-4 ">
     <div class="max-w-6xl mx-auto text-center">
@@ -57,52 +56,95 @@ import Layout from '../layouts/Layout.astro';
         teams in Silicon Valley, and managed global teams.
       </p>
       <p class="text-xl text-white">
-        Our mission is to support you on your hero’s journey.
+        Our mission is to support you on your hero's journey.
       </p>
     </div>
   </section>
-</Layout>
 
-
-  </section>
-
-  <hr class="border-gray-800" />
+  <div class="max-w-[95%] h-[1px] mx-auto bg-gradient-to-r from-[#333] via-[#444] to-[#333]"></div>
 
   <!-- OUR SERVICES -->
-  <section class="min-h-screen flex flex-col justify-center px-4">
-    <div class="max-w-6xl mx-auto text-center">
-      <p class="text-sm uppercase tracking-wider text-gray-400 mb-4">OUR SERVICES</p>
-      <h2 class="text-4xl font-bold text-white mb-16">What we offer</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Penetration Testing Card -->
-        <div class="bg-black/30 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-blue-500/50 transition-colors">
-          <div class="h-48 flex items-center justify-center mb-6">
-            <div class="w-32 h-32 border-2 border-emerald-500/30 rounded-full flex items-center justify-center">
-              <div class="w-24 h-24 border-2 border-emerald-500/60 rounded-full"></div>
+  <section class="section-services py-24">
+    <div class="padding-global px-4 md:px-8">
+      <div class="container-xlarge max-w-7xl mx-auto">
+        <div class="padding-bottom padding-huge pb-16">
+          <div class="services-component">
+
+            <div class="partner-sub-heading text-center">
+              <div
+                class="sohne-mono-ft uppercase tracking-wider text-gray-400 mb-4"
+              >
+                OUR SERVICES
+              </div>
+            </div>
+
+            <h3
+              class="text-5xl font-semibold text-white text-center mb-16"
+            >
+              What we offer
+            </h3>
+
+            <div class="services-card-grid grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+              <!-- Penetration Testing Card -->
+              <a
+                href="/penetration-testing"
+                class="sevices-card-2 w-full max-w-[488px] mx-auto transition-transform duration-300 hover:scale-105"
+              >
+                <div class="services-vector-recruiting flex justify-center items-center h-48 mb-6">
+                  <img
+                    src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66792b96c96ca3dc1c3a9af0_sierra-icon-2.svg"
+                    alt=""
+                    class="w-32 h-32"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="services-copy text-center">
+                  <div class="text-3xl font-normal text-white mb-4">
+                    Penetration Testing
+                  </div>
+                  <div
+                    class="text-lg text-gray-400 max-w-[24ch] mx-auto"
+                  >
+                    Comprehensive security assessments powered by advanced AI-driven vulnerability detection.
+                  </div>
+                </div>
+              </a>
+
+              <!-- Red Team Operations Card -->
+              <a
+                href="/red-team"
+                class="sevices-card-1 w-full max-w-[488px] mx-auto transition-transform duration-300 hover:scale-105"
+              >
+                <div class="services-vector flex justify-center items-center h-48 mb-6">
+                  <img
+                    src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66792b96a7441d7cef6a6550_sierra-icon-1.svg"
+                    alt=""
+                    class="w-32 h-32"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="services-copy text-center">
+                  <div class="text-3xl font-normal text-white mb-4">
+                    Red Team Operations
+                  </div>
+                  <div
+                    class="text-lg text-gray-400 max-w-[24ch] mx-auto"
+                  >
+                    Advanced adversary simulation to test your security posture and incident response.
+                  </div>
+                </div>
+              </a>
+
             </div>
           </div>
-          <h3 class="text-2xl font-bold text-white mb-4">Penetration Testing</h3>
-          <p class="text-gray-400">
-            Comprehensive security assessments powered by advanced AI-driven vulnerability detection.
-          </p>
-        </div>
-        <!-- Red Team Operations Card -->
-        <div class="bg-black/30 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-blue-500/50 transition-colors">
-          <div class="h-48 flex items-center justify-center mb-6">
-            <div class="w-32 h-32 border-2 border-blue-500/30 rounded-lg rotate-45 flex items-center justify-center">
-              <div class="w-24 h-24 border-2 border-blue-500/60 rounded-lg"></div>
-            </div>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-4">Red Team Operations</h3>
-          <p class="text-gray-400">
-            Advanced adversary simulation to test your security posture and incident response.
-          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <hr class="border-gray-800" />
+
+  <div class="max-w-[95%] h-[1px] mx-auto bg-gradient-to-r from-[#333] via-[#444] to-[#333]"></div>
 
   <!-- RECRUITING SERVICES -->
   <section class="py-32 ">
@@ -112,11 +154,11 @@ import Layout from '../layouts/Layout.astro';
           class="absolute inset-0 bg-[url('/assets/topo-pattern.svg')] bg-cover bg-center opacity-10"
         ></div>
         <div class="relative bg-[url('/recruiting-card.webp')] bg-gray-50 p-16 rounded-2xl text-center">
-          <p class="text-sm uppercase tracking-wider text-gray-500 mb-4">RECRUITING SERVICES</p>
-          <h2 class="text-5xl font-bold text-gray-900 mb-8">
+          <p class="text-sm uppercase tracking-wider text-gray-400 mb-4">RECRUITING SERVICES</p>
+          <h2 class="text-5xl font-bold text-white mb-8">
             Hire a world-class global security team
           </h2>
-          <p class="text-lg text-gray-600 mb-8">
+          <p class="text-lg text-white mb-8">
             If you prefer to hire an in‑house team, we have converted our own hiring <br> funnel and workflow into a powerful recruiting and HR service for building <br> teams in Latin America.
           </p>
           <a

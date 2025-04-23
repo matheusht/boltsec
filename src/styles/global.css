@@ -8,4 +8,56 @@
     font-family: 'Inter', sans-serif;
     background-color: #101010;
   }
+  /* src/styles/global.css */
+
+.sevices-card-2 {
+  @apply flex flex-col justify-around items-center text-white border border-[#282828] rounded-lg no-underline;
+  background-image:
+    url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66792b96c96ca3dc1c3a9af0_gradient22.webp'),
+    url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66792b96c96ca3dc1c3a9af0_Service-Cards1.webp');
+  background-position: 50% 50%, 50% 50%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@screen xl {
+  .sevices-card-2 {
+    max-height: 580px;
+    padding-bottom: 2rem;
+  }
+}
+
+.sevices-card-1 {
+  @apply flex flex-col justify-start items-center text-white border border-[#282828] rounded-lg no-underline;
+  background-image:
+    url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66792b96a7441d7cef6a6550_Ellipse%20439.webp'),
+    url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66792b96a7441d7cef6a6550_Contours1.webp');
+  background-position: 50% 50%, 50% 50%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@screen xl {
+  .sevices-card-1 {
+    max-height: 580px;
+    padding-bottom: 2rem;
+  }
+}
+.page-badge {
+  border-radius: 2px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 2px 6px;
+  font-family: 'Sohne Mono', sans-serif;
+  font-size: .85rem;
+  display: inline-block;
+}
+
+.page-badge-purple {
+  background-color: #6749ff;
+}
+
 }

@@ -3,159 +3,227 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <div class="relative min-h-screen flex items-center">
-    <div class="absolute inset-0 bg-gradient-to-b from-[#7E5AFF]/20 to-transparent pointer-events-none"></div>
-    <div class="relative px-4 py-32 w-full">
+  <div class="padding-global bg-[#101010] text-white min-h-screen">
+  <!-- Hero Section -->
+<section
+class="
+  relative
+  w-full
+  h-[90vh]
+  bg-[url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/6630e5e442a71e96a273dae2_Sierra-Studio-Brand-Deck-2024_Page_14s.webp')]
+  blur-[0px]
+  bg-center
+  bg-cover
+  rounded-[10px]
+  overflow-hidden
+"
+>
+<!-- subtle overlay for contrast -->
+<div class="absolute inset-0 bg-white/30"></div>
+
+<!-- content wrapper -->
+<div
+  class="
+    relative z-10
+    flex flex-row justify-start items-end
+    h-full
+    max-w-[90rem] mx-auto
+    px-10 lg:px-16
+    pb-32
+  "
+>
+  <div class="max-w-3xl">
+    <!-- badge -->
+    <span
+      class="
+        inline-flex
+    items-center
+    justify-start
+    rounded-[2px]
+    mb-4
+    px-[6px] py-[2px]
+    font-mono
+    text-[0.85rem]
+    font-medium
+    bg-[#7E5AFF]/10
+    text-[#7E5AFF]
+      "
+    >
+      AI SOLUTIONS
+    </span>
+
+    <!-- headline -->
+    <h1 class="text-6xl text-white leading-tight mb-4">
+      Boost your business<br />
+      security using AI
+    </h1>
+  </div>
+</div>
+</section>
+
+    <!-- Divider -->
+    <div class="max-w-[95%] h-[1px] mx-auto bg-gradient-to-r from-[#333] via-[#444] to-[#333]"></div>
+
+    <!-- Quote Section -->
+    <section class="py-32">
+      <div class="container mx-auto max-w-[90rem]">
+        <div class="padding-vertical padding-xlarge">
+          <div class="about-us-component align-center text-center">
+            <p class="text-[3rem] font-semibold text-white mb-6 leading-tight">
+              "It's hard to think of a single functional area<br />in a business that wouldn't benefit from AI"
+            </p>
+            <p class="text-xl mb-2">Hamilton Helmer</p>
+            <p class="font-mono text-sm uppercase tracking-wider text-gray-400">
+              leading expert on business strategy, author of 7 Powers
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="max-w-[95%] h-[1px] mx-auto bg-gradient-to-r from-[#333] via-[#444] to-[#333]"></div>
+
+    <!-- The Opportunity Section -->
+    <section class="py-32 px-4">
       <div class="max-w-6xl mx-auto">
-        <span class="inline-block px-4 py-2 rounded-full text-sm font-medium bg-[#7E5AFF]/10 text-[#7E5AFF] mb-6">
-          AI SOLUTIONS
-        </span>
-        <h1 class="text-7xl font-bold text-white mb-8 leading-tight max-w-3xl">
-          Boost your business<br />security using AI
-        </h1>
-        <p class="text-xl text-gray-400 max-w-2xl">
-          Transform your security testing workflow with advanced AI models that detect vulnerabilities faster and more accurately than ever before.
-        </p>
+        <p class="text-sm uppercase tracking-wider text-[#7E5AFF] mb-4">THE OPPORTUNITY</p>
+        <h2 class="text-5xl font-bold text-white mb-12">Why AI? Why now?</h2>
+        <div class="max-w-4xl">
+          <p class="text-xl text-gray-300 mb-8">
+            <strong class="text-white">As a security leader, you need to act.</strong> AI is revolutionizing the cybersecurity landscape, making traditional testing methods obsolete. With new attack vectors emerging daily and threats becoming more sophisticated, AI-powered security testing is no longer optional—it's essential.
+          </p>
+          <p class="text-xl text-gray-300 mb-8">
+            <strong class="text-white">We start with your current security posture.</strong> Step one is to assess your existing security measures and understand where you stand today. Then, we identify potential vulnerabilities and create a clear picture of your security landscape.
+          </p>
+          <p class="text-xl text-gray-300 mb-16">
+            <strong class="text-white">At BoltSec, we believe in proactive security testing.</strong> We combine human expertise with AI capabilities to deliver comprehensive security assessments that stay ahead of emerging threats.
+          </p>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="py-32 px-4 bg-[#0D0D0D]">
-    <div class="max-w-4xl mx-auto text-center">
-      <blockquote class="text-5xl font-medium text-white mb-8 leading-tight">
-        "It's hard to think of a single security system that wouldn't benefit from AI-enhanced testing"
-      </blockquote>
-      <div class="mb-12">
-        <p class="text-xl font-medium text-white mb-2">Hamilton Helmer</p>
-        <p class="text-sm uppercase tracking-wider text-gray-400">
-          Leading Expert on Cybersecurity, Author of Modern Security
-        </p>
-      </div>
-      <div class="w-32 h-px bg-white/10 mx-auto"></div>
-    </div>
-  </div>
+    <!-- Divider -->
+    <div class="max-w-[95%] h-[1px] mx-auto bg-gradient-to-r from-[#333] via-[#444] to-[#333]"></div>
 
-  <div class="py-32 px-4">
-    <div class="max-w-6xl mx-auto">
-      <p class="text-sm uppercase tracking-wider text-[#7E5AFF] mb-4">THE OPPORTUNITY</p>
-      <h2 class="text-5xl font-bold text-white mb-12">Why AI? Why now?</h2>
-      <div class="max-w-4xl">
-        <p class="text-xl text-gray-300 mb-8">
-          <strong class="text-white">As a security leader, you need to act.</strong> AI is revolutionizing the cybersecurity landscape, making traditional testing methods obsolete. With new attack vectors emerging daily and threats becoming more sophisticated, AI-powered security testing is no longer optional—it's essential.
-        </p>
-        <p class="text-xl text-gray-300 mb-8">
-          <strong class="text-white">We start with your current security posture.</strong> Step one is to assess your existing security measures and understand where you stand today. Then, we identify potential vulnerabilities and create a clear picture of your security landscape.
-        </p>
-        <p class="text-xl text-gray-300 mb-16">
-          <strong class="text-white">At BoltSec, we believe in proactive security testing.</strong> We combine human expertise with AI capabilities to deliver comprehensive security assessments that stay ahead of emerging threats.
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-black/20 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-            <div class="text-[#7E5AFF] mb-6">
-              <div class="w-12 h-12 border-2 border-current rounded-xl"></div>
+    <!-- Why BoltSec Section -->
+    <section class="py-32 px-4">
+      <div class="max-w-[82rem] h-[34.57rem] mx-auto bg-[url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/6630804ed84dabd8adb3eca3_Section_%20Why%20Sierra2.webp')] bg-cover bg-center rounded-lg border border-[#282828] overflow-hidden">
+        <div class="h-full bg-gradient-to-b from-black/60 to-black/40 backdrop-blur-sm px-16 py-12">
+          <p class="text-sm uppercase tracking-wider text-[#7E5AFF] mb-4">WHY BOLTSEC</p>
+          <h2 class="text-5xl font-bold text-white mb-16">
+            We transformed security testing<br />with AI – we can help you, too.
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-[#e8e9e31a] backdrop-blur-lg rounded-lg p-8 border border-white/10 min-h-[230px]">
+              <div class="flex flex-col gap-4">
+                <img src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66c3f1ed83167c95eca0efdb_icon-diamond-white.svg" alt="" class="w-8 h-8" />
+                <p class="text-base text-white">
+                  <strong>Our team has a highly useful mix of experience.</strong> We are a team of AI innovation leaders from Silicon Valley and professionals from large organizations across the modern economy.
+                </p>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-4">AI-Powered Analysis</h3>
-            <p class="text-gray-400">
-              Identify vulnerabilities with advanced machine learning and automated security assessments
-            </p>
-          </div>
-          <div class="bg-black/20 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-            <div class="text-[#7E5AFF] mb-6">
-              <div class="w-12 h-12 border-2 border-current rounded-xl"></div>
+            <div class="bg-[#e8e9e31a] backdrop-blur-lg rounded-lg p-8 border border-white/10 min-h-[230px]">
+              <div class="flex flex-col gap-4">
+                <img src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66c3f1ed83167c95eca0efdb_icon-diamond-white.svg" alt="" class="w-8 h-8" />
+                <p class="text-base text-white">
+                  <strong>We are at the forefront of new AI technologies.</strong> We learned how to effectively use large language models by transforming our own business. We use our experience to do the same for our customers.
+                </p>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-4">Continuous Monitoring</h3>
-            <p class="text-gray-400">
-              Real-time threat detection and response powered by AI algorithms
-            </p>
-          </div>
-          <div class="bg-black/20 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-            <div class="text-[#7E5AFF] mb-6">
-              <div class="w-12 h-12 border-2 border-current rounded-xl"></div>
+            <div class="bg-[#e8e9e31a] backdrop-blur-lg rounded-lg p-8 border border-white/10 min-h-[230px]">
+              <div class="flex flex-col gap-4">
+                <img src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66c3f1ed83167c95eca0efdb_icon-diamond-white.svg" alt="" class="w-8 h-8" />
+                <p class="text-base text-white">
+                  <strong>We're your partner in doing something new.</strong> Our team takes its responsibility to guide you seriously and owns outcomes with you. We go beyond just building the product, we can help you figure out what to build.
+                </p>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-4">Predictive Security</h3>
-            <p class="text-gray-400">
-              Stay ahead of threats with AI-driven predictive analysis and risk assessment
-            </p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="py-32 px-4 relative overflow-hidden">
-    <div class="absolute inset-0 bg-black/60 backdrop-blur-xl"></div>
-    <div class="relative max-w-6xl mx-auto">
-      <p class="text-sm uppercase tracking-wider text-[#7E5AFF] mb-4">WHY BOLTSEC</p>
-      <h2 class="text-5xl font-bold text-white mb-16">
-        We transformed security testing<br />with AI – we can help you, too.
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-black/40 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
-          <div class="text-[#7E5AFF] mb-6">
-            <div class="w-12 h-12 border-2 border-current rounded-xl"></div>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Expert Team</h3>
-          <p class="text-gray-400">
-            Our team combines expertise in both cybersecurity and AI, bringing years of experience in penetration testing and red team operations.
-          </p>
-        </div>
-        <div class="bg-black/40 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
-          <div class="text-[#7E5AFF] mb-6">
-            <div class="w-12 h-12 border-2 border-current rounded-xl"></div>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Cutting-Edge Tech</h3>
-          <p class="text-gray-400">
-            We're at the forefront of AI-powered security testing, leveraging the latest advancements to deliver thorough assessments.
-          </p>
-        </div>
-        <div class="bg-black/40 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
-          <div class="text-[#7E5AFF] mb-6">
-            <div class="w-12 h-12 border-2 border-current rounded-xl"></div>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">True Partnership</h3>
-          <p class="text-gray-400">
-            We take responsibility for your security posture and work alongside you to implement effective AI-enhanced testing solutions.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- Divider -->
+    <div class="max-w-[95%] h-[1px] mx-auto bg-gradient-to-r from-[#333] via-[#444] to-[#333]"></div>
 
-  <div class="py-32 px-4">
-    <div class="max-w-6xl mx-auto">
-      <p class="text-sm uppercase tracking-wider text-[#7E5AFF] mb-4">LET'S GET STARTED</p>
-      <h2 class="text-5xl font-bold text-white mb-16 text-center">Our process</h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-        <div>
-          <p class="text-[#7E5AFF] text-sm uppercase tracking-wider mb-4">01</p>
-          <h3 class="text-2xl font-bold text-white mb-4">Discovery</h3>
-          <p class="text-gray-400">
-            We analyze your current security measures and identify areas where AI-powered testing can make the biggest impact.
-          </p>
-        </div>
-        <div>
-          <p class="text-[#7E5AFF] text-sm uppercase tracking-wider mb-4">02</p>
-          <h3 class="text-2xl font-bold text-white mb-4">Strategy</h3>
-          <p class="text-gray-400">
-            We develop a customized testing strategy that combines AI capabilities with traditional security methodologies.
-          </p>
-        </div>
-        <div>
-          <p class="text-[#7E5AFF] text-sm uppercase tracking-wider mb-4">03</p>
-          <h3 class="text-2xl font-bold text-white mb-4">Implementation</h3>
-          <p class="text-gray-400">
-            We deploy AI-powered testing tools and conduct thorough security assessments of your systems.
-          </p>
-        </div>
-        <div>
-          <p class="text-[#7E5AFF] text-sm uppercase tracking-wider mb-4">04</p>
-          <h3 class="text-2xl font-bold text-white mb-4">Optimization</h3>
-          <p class="text-gray-400">
-            We continuously refine and improve our testing approach based on results and emerging threats.
-          </p>
+    <!-- Process Section -->
+    <section class="py-32 px-4">
+      <div class="max-w-[82rem] mx-auto">
+        <div class="bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/6630804d458ef70bebcacc60_ContoursBLACK.svg')] bg-cover bg-center rounded-lg border border-[#282828] py-12 pb-24 px-16 h-[34rem]">
+          <div class="text-center mb-16">
+            <p class="text-sm uppercase tracking-wider text-gray-400 mb-4">LET'S GET STARTED</p>
+            <h2 class="text-4xl font-bold text-white">Our process</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+            <div>
+              <p class="font-mono text-[#7E5AFF] mb-4">01</p>
+              <h3 class="text-2xl font-semibold text-white mb-4">Discovery</h3>
+              <p class="text-gray-400">We dig into every step that your firm needs to deliver its product or services, from sales and operations, to relationship management, to back office and beyond.</p>
+            </div>
+            <div>
+              <p class="font-mono text-[#7E5AFF] mb-4">02</p>
+              <h3 class="text-2xl font-semibold text-white mb-4">Roadmap</h3>
+              <p class="text-gray-400">We identify clear value propositions for your organization. Everything is spelled out in your language instead of technical jargon so your team can decide where to invest.</p>
+            </div>
+            <div>
+              <p class="font-mono text-[#7E5AFF] mb-4">03</p>
+              <h3 class="text-2xl font-semibold text-white mb-4">Proof of Value</h3>
+              <p class="text-gray-400">We create prototypes for your highest priority use cases to validate that AI can deliver value for your business before you decide to make a larger investment.</p>
+            </div>
+            <div>
+              <p class="font-mono text-[#7E5AFF] mb-4">04</p>
+              <h3 class="text-2xl font-semibold text-white mb-4">Deliver Value</h3>
+              <p class="text-gray-400">We build internal tools, AI Agents, and automations to deliver value to your business. We'll use our experience crafting AI products to give you a head start over your competitors.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="max-w-[95%] h-[1px] mx-auto bg-gradient-to-r from-[#333] via-[#444] to-[#333]"></div>
+
+    <!-- Get in Touch Section -->
+    <section class="py-32 px-4">
+      <div class="max-w-[82rem] h-[41.43rem] mx-auto bg-[url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/662f7d4405e1ba3ce3eddd50_Section_%20Objective.webp')] bg-cover bg-center rounded-lg border border-[#282828] overflow-hidden">
+        <div class="h-full bg-gradient-to-b from-black/60 to-black/40 backdrop-blur-sm px-16 py-12 flex flex-col items-center justify-center">
+          <p class="text-sm uppercase tracking-wider text-gray-400 mb-4">GET IN TOUCH</p>
+          <h2 class="text-5xl font-bold text-white mb-8">Start your AI transformation</h2>
+          <p class="text-xl text-gray-400 mb-16 max-w-2xl text-center">
+            With an introductory phone call, we can help you navigate this rapidly changing environment and help close gaps in your current approach.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mb-8 max-w-4xl">
+            <div class="bg-[#e8e9e31a] backdrop-blur-lg rounded-lg px-6 py-4 flex items-center gap-4">
+              <img src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66989f6f34a88716f4828998_Rocket.svg" alt="" class="w-6 h-6" />
+              <span class="text-white whitespace-nowrap">AI strategy consulting & advisory</span>
+            </div>
+            <div class="bg-[#e8e9e31a] backdrop-blur-lg rounded-lg px-6 py-4 flex items-center gap-4">
+              <img src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66989f6f34a88716f4828998_Rocket.svg" alt="" class="w-6 h-6" />
+              <span class="text-white whitespace-nowrap">Automate repetitive workflows</span>
+            </div>
+            <div class="bg-[#e8e9e31a] backdrop-blur-lg rounded-lg px-6 py-4 flex items-center gap-4">
+              <img src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66989f6f34a88716f4828998_Rocket.svg" alt="" class="w-6 h-6" />
+              <span class="text-white whitespace-nowrap">Build powerful internal tools</span>
+            </div>
+            <div class="bg-[#e8e9e31a] backdrop-blur-lg rounded-lg px-6 py-4 flex items-center gap-4">
+              <img src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66989f6f34a88716f4828998_Rocket.svg" alt="" class="w-6 h-6" />
+              <span class="text-white whitespace-nowrap">Launch new products</span>
+            </div>
+            <div class="bg-[#e8e9e31a] backdrop-blur-lg rounded-lg px-6 py-4 flex items-center gap-4">
+              <img src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66989f6f34a88716f4828998_Rocket.svg" alt="" class="w-6 h-6" />
+              <span class="text-white whitespace-nowrap">AI architecture review</span>
+            </div>
+            <div class="bg-[#e8e9e31a] backdrop-blur-lg rounded-lg px-6 py-4 flex items-center gap-4">
+              <img src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66989f6f34a88716f4828998_Rocket.svg" alt="" class="w-6 h-6" />
+              <span class="text-white whitespace-nowrap">...and much more!</span>
+            </div>
+          </div>
+          <a href="/contact" class="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+            Get in touch
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
 </Layout>
