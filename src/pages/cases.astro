@@ -1,4 +1,5 @@
 ---
+import { ClientCarousel } from '../components/ClientCarousel';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -54,8 +55,8 @@ class="
 
     <!-- headline -->
     <h1 class="text-6xl text-white leading-tight mb-4">
-      Boost your business<br />
-      security using AI
+      We strive for excellence<br />
+      See our client cases
     </h1>
   </div>
 </div>
@@ -65,14 +66,14 @@ class="
     <div class="max-w-[95%] h-[1px] mx-auto bg-gradient-to-r from-[#333] via-[#444] to-[#333]"></div>
 
     <!-- Quote Section -->
-    <section class="py-32">
+    <section class="py-24">
       <div class="container mx-auto max-w-[90rem]">
         <div class="padding-vertical padding-xlarge">
           <div class="about-us-component align-center text-center">
             <p class="text-[3rem] font-semibold text-white mb-6 leading-tight">
               "It's hard to think of a single functional area<br />in a business that wouldn't benefit from AI"
             </p>
-            <p class="text-xl mb-2">Hamilton Helmer</p>
+            <p class="text-xl mb-2">Testimonials</p>
             <p class="font-mono text-sm uppercase tracking-wider text-gray-400">
               leading expert on business strategy, author of 7 Powers
             </p>
@@ -85,7 +86,7 @@ class="
     <div class="max-w-[95%] h-[1px] mx-auto bg-gradient-to-r from-[#333] via-[#444] to-[#333]"></div>
 
     <!-- The Opportunity Section -->
-    <!-- <section class="py-32 px-4">
+    <!-- <section class="py-24 px-4">
       <div class="max-w-6xl mx-auto">
         <p class="text-sm uppercase tracking-wider text-[#7E5AFF] mb-4">THE OPPORTUNITY</p>
         <h2 class="text-5xl font-bold text-white mb-12">Why AI? Why now?</h2>
@@ -104,10 +105,9 @@ class="
     </section> -->
 
     <!-- Divider -->
-    <div class="max-w-[95%] h-[1px] mx-auto bg-gradient-to-r from-[#333] via-[#444] to-[#333]"></div>
 
     <!-- Why BoltSec Section -->
-    <!-- <section class="py-32 px-4">
+    <!-- <section class="py-24 px-4">
       <div class="max-w-[82rem] h-[34.57rem] mx-auto bg-[url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/6630804ed84dabd8adb3eca3_Section_%20Why%20Sierra2.webp')] bg-cover bg-center rounded-lg border border-[#282828] overflow-hidden">
         <div class="h-full bg-gradient-to-b from-black/60 to-black/40 backdrop-blur-sm px-16 py-12">
           <p class="text-sm uppercase tracking-wider text-[#7E5AFF] mb-4">WHY BOLTSEC</p>
@@ -146,44 +146,17 @@ class="
 
     <!-- Divider -->
 
-    <section class="py-32 px-4">
-      <div class="max-w-[82rem] h-[34.57rem] mx-auto bg-[url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/6630804ed84dabd8adb3eca3_Section_%20Why%20Sierra2.webp')] bg-cover bg-center rounded-lg border border-[#282828] overflow-hidden">
-        <div class="h-full bg-gradient-to-b from-black/60 to-black/40 backdrop-blur-sm px-16 py-12">
-          <p class="text-sm uppercase tracking-wider text-[#7E5AFF] mb-4">SAGUI AI</p>
-          <h2 class="text-5xl font-bold text-white mb-16">
-            We transformed security testing<br />with AI – we can help you, too.
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-[#e8e9e31a] backdrop-blur-lg rounded-lg p-8 border border-white/10 min-h-[230px]">
-              <div class="flex flex-col gap-4">
-                <img src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66c3f1ed83167c95eca0efdb_icon-diamond-white.svg" alt="" class="w-8 h-8" />
-                <p class="text-base text-white">
-                  <strong>Our team has a highly useful mix of experience.</strong> We are a team of AI innovation leaders from Silicon Valley and professionals from large organizations across the modern economy.
-                </p>
-              </div>
-            </div>
-            <div class="bg-[#e8e9e31a] backdrop-blur-lg rounded-lg p-8 border border-white/10 min-h-[230px]">
-              <div class="flex flex-col gap-4">
-                <img src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66c3f1ed83167c95eca0efdb_icon-diamond-white.svg" alt="" class="w-8 h-8" />
-                <p class="text-base text-white">
-                  <strong>We are at the forefront of new AI technologies.</strong> We learned how to effectively use large language models by transforming our own business. We use our experience to do the same for our customers.
-                </p>
-              </div>
-            </div>
-            <div class="bg-[#e8e9e31a] backdrop-blur-lg rounded-lg p-8 border border-white/10 min-h-[230px]">
-              <div class="flex flex-col gap-4">
-                <img src="https://cdn.prod.website-files.com/662b316c8b82b058df121f76/66c3f1ed83167c95eca0efdb_icon-diamond-white.svg" alt="" class="w-8 h-8" />
-                <p class="text-base text-white">
-                  <strong>We're your partner in doing something new.</strong> Our team takes its responsibility to guide you seriously and owns outcomes with you. We go beyond just building the product, we can help you figure out what to build.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- Carousel Section -->
+    <section class="py-24">
+      <div class="max-w-[90rem] mx-auto">
+        <ClientCarousel client:load />
       </div>
     </section>
+
+    <div class="max-w-[95%] h-[1px] mx-auto bg-gradient-to-r from-[#333] via-[#444] to-[#333]"></div>
+
     <!-- Process Section -->
-    <section class="py-32 px-4">
+    <section class="py-24 px-4">
       <div class="max-w-[82rem] mx-auto">
         <div class="bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/6630804d458ef70bebcacc60_ContoursBLACK.svg')] bg-cover bg-center rounded-lg border border-[#282828] py-12 pb-24 px-16 h-[34rem]">
           <div class="text-center mb-16">
@@ -220,7 +193,7 @@ class="
     <div class="max-w-[95%] h-[1px] mx-auto bg-gradient-to-r from-[#333] via-[#444] to-[#333]"></div>
 
     <!-- Get in Touch Section -->
-    <section class="py-32 px-4">
+    <section class="py-24 px-4">
       <div class="max-w-[82rem] h-[41.43rem] mx-auto bg-[url('https://cdn.prod.website-files.com/662b316c8b82b058df121f76/662f7d4405e1ba3ce3eddd50_Section_%20Objective.webp')] bg-cover bg-center rounded-lg border border-[#282828] overflow-hidden">
         <div class="h-full bg-gradient-to-b from-black/60 to-black/40 backdrop-blur-sm px-16 py-12 flex flex-col items-center justify-center">
           <p class="text-sm uppercase tracking-wider text-gray-400 mb-4">GET IN TOUCH</p>

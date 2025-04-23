@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+
+<Layout>
+  <!-- HERO -->
+  <section
+    class="
+      relative
+      w-full
+      h-[90vh]
+      bg-[url('/bg2.png')]
+      blur-[0px]
+      bg-center
+      bg-cover
+      rounded-[10px]
+      overflow-hidden
+    "
+  >
+    <!-- subtle overlay for contrast -->
+    <div class="absolute inset-0 bg-white/30"></div>
+
+    <!-- hero-component-wrapper.home -->
+    <div
+      class="
+        relative z-10
+        flex flex-row justify-start items-end
+        h-full
+        max-w-[90rem] mx-auto
+        px-10 lg:px-16
+        pb-32
+      "
+    >
+      <div class="max-w-3xl">
+        <h1 class="text-6xl text-white leading-tight">
+          About Us<br />
+        </h1>
+        <p class="mt-4 text-[22px] text-white/80">
+          We help founders and business leaders <br> launch new products or
+          transform their <br> workflows with AI.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  
+</Layout>
