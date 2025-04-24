@@ -17,12 +17,22 @@ const slideData: SlideData[] = [
     src: "https://cdn.prod.website-files.com/662b316c8b82b058df121f76/6630804ed84dabd8adb3eca3_Section_%20Why%20Sierra2.webp",
   },
   {
-    title: "Oriagro & Oriquimica",
+    title: "ORIAGRO",
     button: "View Case Study",
     src: "https://cdn.prod.website-files.com/662b316c8b82b058df121f76/6630804ed84dabd8adb3eca3_Section_%20Why%20Sierra2.webp",
   },
   {
-    title: "Marketisa",
+    title: "MARKETISA",
+    button: "View Case Study",
+    src: "https://cdn.prod.website-files.com/662b316c8b82b058df121f76/6630804ed84dabd8adb3eca3_Section_%20Why%20Sierra2.webp",
+  },
+  {
+    title: "SEUMIMO",
+    button: "View Case Study",
+    src: "https://cdn.prod.website-files.com/662b316c8b82b058df121f76/6630804ed84dabd8adb3eca3_Section_%20Why%20Sierra2.webp",
+  },
+  {
+    title: "WEARFY",
     button: "View Case Study",
     src: "https://cdn.prod.website-files.com/662b316c8b82b058df121f76/6630804ed84dabd8adb3eca3_Section_%20Why%20Sierra2.webp",
   },
