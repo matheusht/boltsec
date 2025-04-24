@@ -21,6 +21,11 @@ const slideData: SlideData[] = [
     button: "View Case Study",
     src: "https://cdn.prod.website-files.com/662b316c8b82b058df121f76/6630804ed84dabd8adb3eca3_Section_%20Why%20Sierra2.webp",
   },
+  {
+    title: "Marketisa",
+    button: "View Case Study",
+    src: "https://cdn.prod.website-files.com/662b316c8b82b058df121f76/6630804ed84dabd8adb3eca3_Section_%20Why%20Sierra2.webp",
+  },
 ];
 
 type ControlType = "previous" | "next";
@@ -83,7 +88,7 @@ const Slide: React.FC<{
   };
 
   return (
-    <div className="[perspective:1200px] [transform-style:preserve-3d]">
+    <div className="[perspective:1200px] [transform-style:preserve-3d] select-none">
       <li
         ref={slideRef}
         className="flex flex-1 flex-col items-center justify-center relative text-center text-white w-[70vmin] h-[70vmin] mx-[4vmin] z-10 transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
@@ -95,6 +100,8 @@ const Slide: React.FC<{
             ? "scale(1) rotateX(0deg)"
             : "scale(0.98) rotateX(8deg)",
           transformOrigin: "bottom",
+          userSelect: 'none',
+          WebkitUserSelect: 'none'
         }}
       >
         <div
@@ -106,10 +113,16 @@ const Slide: React.FC<{
           }}
         >
           <img
-            className="absolute inset-0 w-[120%] h-[120%] object-cover transition-opacity duration-300"
+            className="absolute inset-0 w-[120%] h-[120%] object-cover transition-opacity duration-300 select-none pointer-events-auto"
             src={slide.src}
             alt={slide.title}
-            style={{ opacity: isCurrent ? 1 : 0.5 }}
+            style={{ 
+              opacity: isCurrent ? 1 : 0.5,
+              userSelect: 'none',
+              WebkitUserSelect: 'none',
+              pointerEvents: 'none' 
+            }}
+            draggable="false"
           />
           {isCurrent && <div className="absolute inset-0 bg-black/30" />}
         </div>
@@ -119,10 +132,10 @@ const Slide: React.FC<{
             isCurrent ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
-          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold mb-4">
+          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold mb-4 select-none">
             {slide.title}
           </h2>
-          <button className="px-4 py-2 bg-white text-black rounded-2xl shadow-sm hover:shadow-lg transition">
+          <button className="px-4 py-2 bg-white text-black rounded-2xl shadow-sm hover:shadow-lg transition select-none">
             {slide.button}
           </button>
         </article>
@@ -132,8 +145,8 @@ const Slide: React.FC<{
 });
 
 export function ClientCarousel() {
-  const [current, setCurrent] = useState<number>(0);
-  const [startX, setStartX] = useState<number>(0);
+  const [current, setCurrent] = useState<number>(1);
+  const [startX, setStartX] = useState<number>(1);
   const [isDragging, setIsDragging] = useState(false);
   const id = useId();
   const len = slideData.length;
@@ -175,14 +188,12 @@ export function ClientCarousel() {
 
   const handleSwipe = (deltaX: number) => {
     const containerWidth = containerRef.current?.offsetWidth || 0;
-    const swipeThreshold = containerWidth * 0.1; // 10% of container width
+    const swipeThreshold = containerWidth * 0.1;
 
     if (Math.abs(deltaX) > swipeThreshold) {
       if (deltaX > 0) {
-        // Swipe right - previous
         setCurrent((c) => (c - 1 + len) % len);
       } else {
-        // Swipe left - next
         setCurrent((c) => (c + 1) % len);
       }
     }
@@ -191,8 +202,9 @@ export function ClientCarousel() {
   return (
     <div
       ref={containerRef}
-      className="relative w-[70vmin] h-[70vmin] mx-auto"
+      className="relative w-[70vmin] h-[70vmin] mx-auto select-none"
       aria-labelledby={`carousel-${id}`}
+      style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
     >
       <ul
         className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out cursor-grab active:cursor-grabbing"
