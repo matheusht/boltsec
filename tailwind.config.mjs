@@ -6,6 +6,10 @@ export default {
       screens: {
         'xs': '480px',
       },
+      fontFamily: {
+        'Sohne': ['Sohne', 'sans-serif'],
+        'SohneMono': ['Sohne Mono', 'monospace']
+      },
     },
   },
   plugins: [],

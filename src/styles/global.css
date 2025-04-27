@@ -5,11 +5,47 @@
 
 @layer base {
   html {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Sohne Header', sans-serif;
     background-color: #101010;
   }
   /* src/styles/global.css */
 
+  @font-face {
+    font-family: 'Sohne Header';
+    src: url('/public/fonts/test-soehne-kraftig.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Sohne Halbfett';
+    src: url('/public/fonts/test-soehne-halbfett.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Sohne Mono';
+    src: url('/public/fonts/test-soehne-mono-buch.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+.sohne-mono-ft {
+  font-family: 'Sohne Mono' ,'sans-serif';
+}
+.text-weight-semibold {
+  font-family: 'Sohne Halbfett','sans-serif';
+  font-weight: 600;
+}
+.text-weight-normal {
+  font-family: 'Sohne Mono',sans-serif;
+  font-weight: 400;
+}
+  
 .sevices-card-2 {
   @apply flex flex-col justify-around items-center text-white border border-[#282828] rounded-lg no-underline;
   background-image:
@@ -130,5 +166,4 @@ element {
   color: #bdbdbd;
   position: static;
 }
-
 }
