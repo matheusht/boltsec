@@ -8,7 +8,8 @@ export default {
       },
       fontFamily: {
         'Sohne': ['Sohne', 'sans-serif'],
-        'SohneMono': ['Sohne Mono', 'monospace']
+        'sohne-mono': ['Sohne Mono', 'monospace'],
+        'sohne-header': ['Sohne Header', 'sans-serif']
       },
     },
   },

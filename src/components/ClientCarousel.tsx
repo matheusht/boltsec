@@ -142,7 +142,7 @@ const Slide: React.FC<{
             isCurrent ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
-          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold mb-4 select-none">
+          <h2 className="text-lg font-sohne md:text-2xl lg:text-4xl font-semibold mb-4 select-none">
             {slide.title}
           </h2>
           <button className="px-4 py-2 bg-white text-black rounded-2xl shadow-sm hover:shadow-lg transition select-none">
