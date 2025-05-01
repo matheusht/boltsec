@@ -15,7 +15,7 @@ const MobileNavigation = () => {
         flex justify-between items-center lg:hidden md:max-w-xl sm:max-w-md max-w-xs mx-auto"
       >
         <a href="/" className="text-white text-xl font-bold" aria-label="Home">
-          BoltSec
+          Boltsec
         </a>
         <button
           onClick={toggleMenu}
