@@ -1,0 +1,94 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { slug: 'sagui-ai' },
+      props: {
+        title: "SAGUI AI",
+        subtitle: "How Sagui AI transformed their security testing with AI",
+        description: "Sagui AI has established itself as a leader in AI-powered security testing, serving over 500 enterprise customers across 30+ countries.",
+        stats: [
+          { value: "47%", label: "Increase in vulnerability detection" },
+          { value: "63%", label: "Reduction in false positives" },
+          { value: "56%", label: "Faster security assessments" },
+          { value: "41%", label: "Cost reduction in testing" },
+          { value: "26%", label: "Increase in customer satisfaction" },
+          { value: "55%", label: "More comprehensive coverage" }
+        ],
+        founded: "San Francisco, 2023",
+        switched: "January 2024",
+        heroImage: "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg"
+      }
+    },
+    {
+      params: { slug: 'oriagro' },
+      props: {
+        title: "ORIAGRO",
+        subtitle: "Securing agricultural IoT systems at scale",
+        description: "Oriagro revolutionized agricultural IoT security, protecting over 10,000 connected devices across 1,000+ farms.",
+        stats: [
+          { value: "52%", label: "Reduction in security incidents" },
+          { value: "71%", label: "Faster threat detection" },
+          { value: "45%", label: "Improvement in device uptime" },
+          { value: "38%", label: "Cost savings in maintenance" },
+          { value: "29%", label: "Increase in system reliability" },
+          { value: "60%", label: "Better resource utilization" }
+        ],
+        founded: "Sacramento, 2022",
+        switched: "March 2024",
+        heroImage: "https://images.pexels.com/photos/2132168/pexels-photo-2132168.jpeg"
+      }
+    }
+  ];
+}
+
+const { title, subtitle, description, stats, founded, switched, heroImage } = Astro.props;
+---
+
+<Layout>
+  <div class="min-h-screen bg-[#101010] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+      <nav class="mb-8">
+        <a href="/cases" class="text-gray-400 hover:text-white transition-colors">
+          Customers / {title}
+        </a>
+      </nav>
+
+      <h1 class="text-5xl font-bold mb-8">{subtitle}</h1>
+
+      <div class="aspect-[16/9] rounded-lg overflow-hidden mb-16">
+        <img src={heroImage} alt={title} class="w-full h-full object-cover" />
+      </div>
+
+      <div class="max-w-3xl mb-16">
+        <p class="text-xl text-gray-300">{description}</p>
+
+        <div class="mt-8 grid grid-cols-2 gap-4">
+          <div>
+            <h3 class="text-gray-400 text-sm">{title}</h3>
+            <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">{title.toLowerCase()}.com ↗</a>
+          </div>
+          <div>
+            <h3 class="text-gray-400 text-sm">Founded</h3>
+            <p>{founded}</p>
+          </div>
+          <div>
+            <h3 class="text-gray-400 text-sm">Switched</h3>
+            <p>{switched}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mb-16">
+        {stats.map(stat => (
+          <div class="bg-[#1D1F2F] p-8 rounded-lg">
+            <p class="text-4xl font-bold mb-2">{stat.value}</p>
+            <p class="text-gray-400">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>
