@@ -1,0 +1,47 @@
+---
+import MobileNavigation from "./MobileNavigation.tsx";
+---
+
+<nav
+  class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-black/40 backdrop-blur-md rounded-md px-10 py-5 border border-gray-800 w-full max-w-5xl
+  flex justify-between items-center hidden lg:flex"
+>
+  <div class="flex items-center gap-8">
+    <a
+      href="/"
+      class="text-white hover:text-gray-300 transition-colors"
+      aria-label="Home"
+    >
+      Home
+    </a>
+    <a
+      href="/cases"
+      class="text-gray-400 hover:text-gray-300 transition-colors"
+      aria-label="Cases "
+    >
+      Cases
+    </a>
+    <a
+      href="/solutions"
+      class="text-gray-400 hover:text-gray-300 transition-colors"
+      aria-label="Product Development"
+    >
+      Solutions
+    </a>
+    <a
+      href="/about-us"
+      class="text-gray-400 hover:text-gray-300 transition-colors"
+      aria-label="About Us"
+    >
+      About Us
+    </a>
+  </div>
+  <a
+    href="/contact"
+    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors"
+    aria-label="Get In Touch"
+  >
+    Get In Touch
+  </a>
+</nav>
+<MobileNavigation client:load />
