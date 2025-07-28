@@ -32,9 +32,6 @@ importers:
       astro:
         specifier: ^5.7.12
         version: 5.7.12(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.2)(typescript@5.8.3)(yaml@2.7.1)
-      astro-i18n:
-        specifier: ^2.2.4
-        version: 2.2.4(esbuild@0.25.2)
       astro-i18n-aut:
         specifier: ^0.7.3
         version: 0.7.3(astro@5.7.12(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.2)(typescript@5.8.3)(yaml@2.7.1))
@@ -970,12 +967,6 @@ packages:
     resolution: {integrity: sha512-+GThdRG0pI6R/CuJTeldXZkrw0/W/0acgVWV9S1+ZN3pzA14ypFczjJaG1GxkZPEVsj2folXlgdbW18Bew+jrg==}
     peerDependencies:
       astro: ^5.0.0
-
-  astro-i18n@2.2.4:
-    resolution: {integrity: sha512-vhvxBtStNLLghtl63aGhBEtU1DqlYz0D3ggz5Nh2QZok36s9Ss3v9b4txN3mH/OZ90JUwkII13CYQL9wozjXBQ==}
-    hasBin: true
-    peerDependencies:
-      esbuild: 0.x
 
   astro@5.7.12:
     resolution: {integrity: sha512-UQOItiZz2hcv9PlHTQ6dNqFDIVNPnmwk6eyAjJqPE9O8EDHZK2JKtTRD0CBFN2Uqr0RE0TWP2gqDpLfsa5dJEA==}
@@ -3277,10 +3268,6 @@ snapshots:
       slash: 5.1.0
     transitivePeerDependencies:
       - babel-plugin-macros
-
-  astro-i18n@2.2.4(esbuild@0.25.2):
-    dependencies:
-      esbuild: 0.25.2
 
   astro@5.7.12(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.2)(typescript@5.8.3)(yaml@2.7.1):
     dependencies:

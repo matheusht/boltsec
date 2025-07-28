@@ -31,28 +31,28 @@ const MobileMenu = ({ isOpen }: MobileMenuProps) => {
           Home
         </a>
         <a
-          href="/cases"
+          href="/cases/"
           className="text-gray-400 hover:text-gray-300 transition-colors text-xl"
           aria-label="Cases"
         >
           Cases
         </a>
         <a
-          href="/product-development"
+          href="/solutions/"
           className="text-gray-400 hover:text-gray-300 transition-colors text-xl"
           aria-label="Product Development"
         >
           Product Development
         </a>
         <a
-          href="/about-us"
+          href="/about-us/"
           className="text-gray-400 hover:text-gray-300 transition-colors text-xl"
           aria-label="About Us"
         >
           About Us
         </a>
         <a
-          href="/contact"
+          href="/contact/"
           className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition-colors text-xl"
           aria-label="Get In Touch"
         >

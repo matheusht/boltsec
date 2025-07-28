@@ -1,0 +1,42 @@
+{
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre Nós",
+    "solutions": "Soluções",
+    "cases": "Casos de Estudo",
+    "contact": "Contato"
+  },
+  "home": {
+    "hero": {
+      "title": "Segurança Cibernética de Próxima Geração",
+      "subtitle": "Protegemos seu negócio com soluções avançadas de segurança digital",
+      "cta": "Saiba Mais"
+    },
+    "services": {
+      "title": "Nossos Serviços",
+      "subtitle": "Soluções completas de segurança para sua empresa"
+    }
+  },
+  "about": {
+    "title": "Sobre a BoltSec",
+    "subtitle": "Especialistas em segurança cibernética",
+    "description": "Somos uma empresa líder em segurança cibernética, dedicada a proteger organizações contra ameaças digitais."
+  },
+  "solutions": {
+    "title": "Nossas Soluções",
+    "subtitle": "Tecnologia de ponta para sua segurança"
+  },
+  "cases": {
+    "title": "Casos de Estudo",
+    "subtitle": "Sucessos reais em segurança cibernética",
+    "viewAll": "Ver Todos"
+  },
+  "common": {
+    "learnMore": "Saiba Mais",
+    "getInTouch": "Entre em Contato",
+    "readMore": "Ler Mais",
+    "back": "Voltar",
+    "next": "Próximo",
+    "previous": "Anterior"
+  }
+} 

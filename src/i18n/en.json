@@ -1,0 +1,42 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "solutions": "Solutions",
+    "cases": "Case Studies",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Next-Generation Cybersecurity",
+      "subtitle": "We protect your business with advanced digital security solutions",
+      "cta": "Learn More"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Complete security solutions for your company"
+    }
+  },
+  "about": {
+    "title": "About BoltSec",
+    "subtitle": "Cybersecurity experts",
+    "description": "We are a leading cybersecurity company, dedicated to protecting organizations against digital threats."
+  },
+  "solutions": {
+    "title": "Our Solutions",
+    "subtitle": "Cutting-edge technology for your security"
+  },
+  "cases": {
+    "title": "Case Studies",
+    "subtitle": "Real cybersecurity success stories",
+    "viewAll": "View All"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getInTouch": "Get in Touch",
+    "readMore": "Read More",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  }
+} 

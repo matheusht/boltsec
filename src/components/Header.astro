@@ -1,14 +1,19 @@
+---
+import LanguageSwitcher from "./LanguageSwitcher";
+---
+
 <nav
   class="absolute top-8 left-1/2 -translate-x-1/2 backdrop-blur-md rounded-md px-5 py-3 w-full max-w-5xl
-  flex justify-center items-center lg:flex"
+  flex justify-between items-center lg:flex"
 >
   <a
     href="/"
-    class="text-white hover:text-gray-300 transition-colors"
+    class="text-white hover:text-gray-300 transition-colors font-semibold"
     aria-label="Home"
   >
     Boltsec
   </a>
+  <!-- <LanguageSwitcher client:load /> -->
 </nav>
 <div class="mb-24">
   <slot />

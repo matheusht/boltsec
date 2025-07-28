@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getTranslation, getLocaleFromURL } from '../lib/i18n';
+
+// Get current locale from URL
+const locale = getLocaleFromURL(Astro.url);
+
+// Get translations
+const title = await getTranslation(locale, "home.hero.title");
+const subtitle = await getTranslation(locale, "home.hero.subtitle");
+const cta = await getTranslation(locale, "home.hero.cta");
+const learnMore = await getTranslation(locale, "common.learnMore");
+---
+
+<Layout title="i18n Example">
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold text-center mb-8">Internationalization Example</h1>
+      
+      <div class="bg-gray-800 rounded-lg p-6 mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Translation Demo</h2>
+        <div class="space-y-4">
+          <div>
+            <h3 class="text-lg font-medium text-blue-400">Hero Title:</h3>
+            <p class="text-white">{title}</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-medium text-blue-400">Hero Subtitle:</h3>
+            <p class="text-white">{subtitle}</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-medium text-blue-400">Call to Action:</h3>
+            <p class="text-white">{cta}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-6 mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Current Language</h2>
+        <p class="text-gray-400 mb-4">Current Language: <span class="text-white font-semibold">{locale === 'pt-BR' ? 'Portuguese (Brazil)' : 'English'}</span></p>
+        <p class="text-gray-400 mb-4">Current URL: <span class="text-white font-mono">{Astro.url.pathname}</span></p>
+        <p class="text-gray-400">This page demonstrates how translations work with astro-i18n-aut</p>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-6">
+        <h2 class="text-2xl font-semibold mb-4">Navigation</h2>
+        <div class="flex flex-wrap gap-4">
+          <a href="/" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors">
+            Home (PT)
+          </a>
+          <a href="/en/" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors">
+            Home (EN)
+          </a>
+          <a href="/about-us" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded transition-colors">
+            About (PT)
+          </a>
+          <a href="/en/about-us" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded transition-colors">
+            About (EN)
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout> 
